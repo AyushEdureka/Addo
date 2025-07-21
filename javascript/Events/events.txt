@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Emplyee Check-In</h2>
+    <input type="text" id="empName" placeholder="Enter Emplyee Name " >
+    <button onclick="checkIn()">Check In</button>
+
+    <h3>Checked In Employees:</h3>
+    <ul id="attendance"></ul>
+
+    <script>
+
+       let employees = [];
+
+       function checkIn(){
+         let name  =  document.getElementById("empName").value
+         let list = document.getElementById("attendance")
+
+
+         if(name === ""){
+            alert("Please enter a validName")
+            return;
+         }
+
+         let now = new Date().toLocaleTimeString()
+         let entry = name + " - "  + now
+
+         employees.push(entry)
+
+         //Clear and Update the list
+         list.innerHTML = " ";
+         for(let emp of employees){
+            let li = document.createElement("li")
+            li.textContent = emp
+            list.appendChild(li)
+         }
+              
+         document.getElementById("empName").value = ""
+
+
+       }
+       
+
+
+    </script>
+</body>
+</html>
+
+
+
+--------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="myButton">Add to cart</button>
+    <p id="message"></p>
+
+    <script>
+        //1.  Select The Elment where you can do any action/Event
+
+       const button =  document.getElementById("myButton")
+       const message =   document.querySelector("#message")
+                                            //#IdNAme
+             
+          //2. Click is and Event or Action
+          // addEventListener('What Type Of Event(click)',function(){
+                                             
+
+         //                       })     
+         
+        //  button.addEventListener('click',function(){
+        //     message.textContent = "Product Added To Cart"
+        //  })
+
+
+        //  button.addEventListener('dblclick',function(){
+        //     message.textContent = "Product Added To Cart"
+        //  })
+
+
+        // button.addEventListener('mouseover',function(){
+        //     message.textContent = "Product Added To Cart"
+        //  })
+
+        //  button.addEventListener('mouseout',function(){
+        //     message.textContent = "Out Of Stock"
+        //  })
+    </script>
+</body>
+</html>
+
+----
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="input" placeholder="Enter Something.....">
+
+
+    <script>
+        //1.Select
+        let input  =  document.getElementById("input")
+
+        // input.addEventListener('keydown',function(event){
+                
+        //     console.log(event.key)
+        // })
+
+
+        // input.addEventListener('keyup',function(event){
+                
+        //     console.log(event.key)
+        // })
+
+
+           //shows : Which Key User pressed
+        // input.addEventListener('keypress',function(event){
+                
+        //     console.log(event.key)
+        // })
+
+
+
+
+        //Change: To Capture the Change 
+        // input.addEventListener('change',function(event){
+                
+        //     console.log(event.target.value)
+        // })
+    </script>
+</body>
+</html>

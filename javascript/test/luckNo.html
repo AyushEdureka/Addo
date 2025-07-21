@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Roll A Dice: Guess the Number
+
+        let luckyNo =  Math.floor(Math.random()*6)+1
+         //  console.log(luckyNo)
+
+         //Loops : To Repeat the task
+
+         while(true){
+
+           guess = prompt('Enter Number 1 to 6');
+           
+           if(luckyNo == guess){
+            alert('You Won')
+            break;
+           }else{
+            alert('Better luck Next time')
+           }
+
+         }
+
+    </script>
+</body>
+</html>

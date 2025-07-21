@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     
+    <script>
+
+        var a = 10; //GLOBAL SCOPE: YOU CAN CALL IT ANYWHERE IN YOUR CODE
+
+          function abc(){
+            
+            var b=20   //LOCAL SCOPE: CAN BE CALL INSIDE THE FUNCTION ONLY
+
+            if(true){
+             let c =30   //BLOCK SCOPE : CAN BE CALL INSIDE THE BLOCK ONLY
+
+                 console.log(a)
+                 console.log(b)
+                 console.log(c)
+            }
+           
+           
+          }
+          abc()
+
+          
+
+         
+
+      
+    </script>
+
+</body>
+</html>

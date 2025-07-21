@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Squid Game:Lucky Number</h1>
+
+    <p>Guess a number between <strong>1 to 6</strong></p>
+
+    <input type="number" id="userGuess" min="1" max="6" />
+    <button onclick="checkGuess()">Submit</button>
+
+    <div class="message" id="messageBox"></div>
+
+    <script>
+        //Js : 
+        let luckyNo =  Math.floor(Math.random()*6)+1;
+        let won = false;
+
+        function checkGuess(){
+         const guess =  parseInt(document.getElementById("userGuess").value)
+         const messageBox = document.getElementById("messageBox")
+
+         if(won) return;
+
+         if(guess === luckyNo){
+            messageBox.innerHTML = '<span>You Won SQUID GAME</span>';
+            won = true;
+         }else{
+            messageBox.innerHTML = '<span>Better luck Next time</span>'
+         }
+        }
+    </script>
+</body>
+</html>

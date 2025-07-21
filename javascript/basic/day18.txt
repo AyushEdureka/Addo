@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. For loop: Help us to do the task in same line
+
+        //syntax : for(starting point;condition/ending point,increment or decrement)
+        
+        //Task : print number 1 to 10
+
+        //without loop
+        // console.log(1)
+        // console.log(2)
+        // console.log(3)
+
+        // //with for loop
+        // for(let i =1; i<=10;i++){   //11<=10:  False -> come out of loop
+        //     console.log(i)
+        // }
+
+        //Print numbers 10 to 1
+        // for(let y=10;y>=1;y--){
+        //           console.log("The value of :" +    y)
+        // }
+
+
+
+        //While loop : Entry Controlled Loop
+
+        // while(condition) - syntax
+
+        // let count = 1
+
+        // while(count<=5){  //1,2,3,4,5,  --- 6<=5 : F
+            
+        //     console.log(count);
+        //     count++
+
+        // }
+
+
+
+        //Do while - Exit Controlled Loop
+        // It wil run the code once before checking the condition
+
+        //Syntax
+        //  do{
+        //      //do the task once 
+        // }while(condition)
+
+        // let number=7
+
+        // do{
+        //     console.log("This is do while")
+        // }while(number<5);
+
+
+        //For of : Used in Array to Print DATA
+
+        let fruits = ["apple","bannana","mango"]
+
+        for(let x of fruits){
+           console.log(x);
+        }
+
+
+        //For in Used in Object
+
+        let car = {
+           //key:value
+            brand:"Tesla",
+            model:"Model X",
+            year:2020
+        }
+
+        for(let a in car){
+            console.log(a + "=" + car[a])
+        }
+
+        
+
+
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+--------------------------->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+    //If Statement: Gives the Output when condition is True
+
+//    let age = 28
+//    //syntax - if(condition)
+
+
+//    if(age>=18){
+             
+//     alert("Congrats Go Driver")
+
+//    }
+   //Problem no output when condition becomes false
+
+
+
+   //If else statement: if(true)->output , else condition false ->op
+
+   let age = 6
+   //syntax - if(condition)
+
+
+//    if(age>=18){
+             
+//     alert("Congrats Go Driver")
+    
+//    }else{
+//           console.log("Next time")
+//    }
+
+
+// else if: To handle Mutiple condition at same time
+
+let tempp = 21;
+
+if(tempp>=30){                             //21>=30: F
+    document.write('It is a sunndy day')
+}
+else if(tempp>25){                                           //21>25: F
+    alert("It is lit warm outside")
+}
+else if(tempp>20){  //21>20 : T
+    console.log("It is a nice wether")
+}
+else{
+    console.log("it is cold oustside")
+}
+
+
+
+ //Switch Satement : changing one case to another case
+
+ let day = 9
+
+ switch(day){
+
+    case 1:
+    console.log("Monday")
+    break;
+
+    case 2:
+    console.log("Tuesday")
+    break;
+
+    case 3:
+    console.log("Wednesday")
+     break;
+
+    case 4:
+    console.log("Thursday")
+     break;
+
+    case 5:
+    console.log("Friday")
+     break;
+
+    case 6:
+    console.log("Saturday")
+     break;
+
+    case 7:
+    console.log("Sunday")
+     break;
+
+     default:
+        console.log("Invalid choice")
+
+
+ }
+
+
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+--->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+     //1.Array : Store Mutiple data also with Mutiple DATA type
+     // []: sqaure bracket
+     // Index No : always start with 0
+
+     var students = ["std1","std2",'std3','std4',12,56,89,33]
+
+     //Length = Total No of Data
+     console.log(students.length);
+     console.log(students[3]) 
+     
+     
+
+
+     //OBJECT: Collection of Data in Object
+     //key:value
+
+     var obj = {
+           
+        name:'Addo',
+        email:'emmail@gamil.com',
+        age:23,
+        image:'',
+        country:'Ghana',
+
+
+     }
+
+     console.log(obj.email)
+
+
+     function add(){
+        //
+        console.log(5+5)
+     }
+     add()
+
+     
+
+
+
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Food Online Delivery System
+
+        //Step 1: Define Food items : variable-X , Array-X , Object-Y
+
+        let pizza = {name:"Pizza",price:200};
+        let burger = {name:"Burger",price:100};
+        let pasta = {name:"Pasta",price:150};
+
+        //Step2 : Customer Order (Array)
+        let cart = [pizza,burger,pasta]
+
+        //Step 3 : Total Price
+        let totalPrice = pizza.price + burger.price + pasta.price
+
+        console.log("Your Cart Items");
+        cart.forEach((item)=> console.log(`- ${item.name} : ${item.price}`)  )
+
+        console.log("Total Price Before Discount " + totalPrice)
+
+        //Step 4: Apply Discount
+        let isPrimeUser = true
+        let discount = 0
+
+        if(isPrimeUser && totalPrice > 300){
+            discount = totalPrice * 0.2
+            console.log('Premium user discount : 20% off')
+        } else if(totalPrice > 300){
+            discount= totalPrice *0.1 
+            console.log("Regular Discount")
+        } else {
+            console.log("No discount")
+        }
+
+
+        //stpe 5:
+        let finalPrice = totalPrice - discount
+        console.log("Final Price to Pay  :" + finalPrice)
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+
+----------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Movie Ticket Booking
+
+        let movies = [
+            {name:"Avengers",price:250},
+            {name:"Inception",price:300},
+            {name:"Harry Potter",price:200},
+            {name:"Inception",price:350},
+        ];
+        //HInt: Length = no of data--4
+        //Last index = length - 1  --> 3
+
+        //Display the movie: For Loop
+        console.log("Available MOvies")
+
+        for(let i=0;i < movies.length; i++){
+            console.log((i+1) +  ". " + movies[i].name + "-$" + movies[i].price)
+        }
+
+        //Step 3: User selected movie
+        let selectedMovie = [0,2]
+
+        //Calculate the toTal price
+        let totalPrice = 0;
+        let index=0;
+
+        while(index < selectedMovie.length){
+            totalPrice += movies[selectedMovie[index]].price;
+            index++
+        }
+
+        //Step 5: Discount
+
+        let discount =0
+        let isMember= true
+
+        do{
+
+          if(totalPrice  > 500 && isMember){
+            discount=totalPrice*0.15
+            console.log("MemberShip discount 15% Applied")
+          } else if(totalPrice>500){
+            discount=totalPrice*0.10
+            console.log("Regular discount 10% Applied")
+          }else{
+            console.log("No discount")
+          }
+
+        }while(false)
+
+        //Step 6:Final
+        let finalPrice = totalPrice-discount
+        console.log("Total Price before discount :" + totalPrice)
+        console.log("Final Price After Discount " + finalPrice)
+
+
+
+
+        //Do while Loop Example : ATM PIN Entry
+        
+
+
+    </script>
+</body>
+</html>
+	
+
+
+    //Do while Loop Example : ATM PIN Entry
+         
+         let correctPin = 1234
+         let userPin;  //undefined 
+
+         do{
+            userPin = 1234
+            console.log("Entered Pin " + userPin)
+            
+         }while(userPin !== correctPin); 
+            //    2345 !==  1234  : True
+            //    1234 !== 1234   : False
+
+         console.log("Access Granted")

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Emplyee Check-In</h2>
+    <input type="text" id="empName" placeholder="Enter Emplyee Name " >
+    <button onclick="checkIn()">Check In</button>
+
+    <h3>Checked In Employees:</h3>
+    <ul id="attendance"></ul>
+
+    <script>
+
+       let employees = [];
+
+       function checkIn(){
+         let name  =  document.getElementById("empName").value
+         let list = document.getElementById("attendance")
+
+
+         if(name === ""){
+            alert("Please enter a validName")
+            return;
+         }
+
+         let now = new Date().toLocaleTimeString()
+         let entry = name + " - "  + now
+
+         employees.push(entry)
+
+         //Clear and Update the list
+         list.innerHTML = " ";
+         for(let emp of employees){
+            let li = document.createElement("li")
+            li.textContent = emp
+            list.appendChild(li)
+         }
+              
+         document.getElementById("empName").value = ""
+
+
+       }
+       
+
+
+    </script>
+</body>
+</html>

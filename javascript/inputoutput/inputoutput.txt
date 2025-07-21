@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     //Output Statement:
+
+     console.log('Hii Output From Console')
+
+     //webapge:document
+     document.write('Hii I am from webpage')
+
+     //pop up: alert
+
+     alert('Hii notfication')
+
+
+
+
+        </script>
+</body>
+</html>
+
+
+
+------
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Input
+
+      //  prompt('Enter your Name?')
+
+        //confirmation:
+        confirm('Are you sure?')
+    </script>
+</body>
+</html>
+
+
+----
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<button onclick="myFun()">Sign In</button>
+<body>
+    <script>
+
+     function myFun(){
+        const  UserName   =   prompt('Enter your Name')
+
+        console.log('User Entered ' + UserName)
+        alert('Hii ' + UserName + 'Welcome')
+        document.write(UserName)
+     }
+
+
+    </script>
+</body>
+</html>
+
+
+------
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="mYh">Big Billion Sale 50%</h1>
+ 
+    <button onclick="abc()">Click Me To Change</button>
+
+    <script>
+//InnerHTML:  To change or update the content of HTML Tags
+
+function abc(){
+  
+    var xyz = "Welcome to Amazon"
+
+    //Step1: select the html element/tag
+    const ele  =  document.getElementById("mYh");  //selected H1 tag from HTML
+
+    ele.innerHTML = xyz
+
+}
+    </script>
+</body>
+</html>
+
+
+
+------
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Array and Its Operation:
+
+        let fruits = ['A','B','C','D']
+        console.log(fruits)
+
+        //Add the data directly
+        fruits.push('E');  //Data added at back
+        fruits.unshift('1'); //Data added from front
+
+        //Delete the data 
+        fruits.pop();   //Data deleted from back
+        fruits.shift();  //data delere from front
+
+
+         //String - "string"
+         let firstname = "John"
+         let lastname = "Wick"
+
+         let fullname = firstname + "   " + lastname
+         console.log(fullname)
+
+         console.log(firstname.toUpperCase())  
+         console.log(lastname.toLowerCase())
+
+
+         console.log(firstname[2]);  //Index no to print single character
+
+         
+      console.log(firstname.replace('John','Addo'))
+
+    </script>
+</body>
+</html>
+
+----
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //Math
+
+        console.log("Pi :" , Math.PI)
+        console.log("SqaureRootof 2 " , Math.SQRT2)
+        console.log(Math.sqrt(9))
+
+        console.log("Cube of 2 ", Math.pow(2,4))
+
+
+        console.log(Math.floor(5.8));   //5
+        console.log(Math.ceil(6.2));  // 7
+
+        console.log(Math.round(3.5));//  4
+        console.log(Math.round(3.4)); //3
+        console.log(Math.round(3.6)); //4
+
+        console.log(Math.random())
+
+
+    </script>
+</body>
+</html>
+
+
+
+-----
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Date Object
+
+        let abc = new Date();  //Date Object Created
+
+        //variblename.methodname()
+
+        console.log(abc.getDay()); //Monday starts with 1
+        console.log(abc.getFullYear())
+        console.log(abc.getMonth());   //Jan starts with 0
+        console.log(abc.getHours())
+    </script>
+</body>
+</html>
+
+
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Roll A Dice: Guess the Number
+
+        let luckyNo =  Math.floor(Math.random()*6)+1
+         //  console.log(luckyNo)
+
+         //Loops : To Repeat the task
+
+         while(true){
+
+           guess = prompt('Enter Number 1 to 6');
+           
+           if(luckyNo == guess){
+            alert('You Won')
+            break;
+           }else{
+            alert('Better luck Next time')
+           }
+
+         }
+
+    </script>
+</body>
+</html>
+
+
+
+----
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Squid Game:Lucky Number</h1>
+
+    <p>Guess a number between <strong>1 to 6</strong></p>
+
+    <input type="number" id="userGuess" min="1" max="6" />
+    <button onclick="checkGuess()">Submit</button>
+
+    <div class="message" id="messageBox"></div>
+
+    <script>
+        //Js : 
+        let luckyNo =  Math.floor(Math.random()*6)+1;
+        let won = false;
+
+        function checkGuess(){
+         const guess =  parseInt(document.getElementById("userGuess").value)
+         const messageBox = document.getElementById("messageBox")
+
+         if(won) return;
+
+         if(guess === luckyNo){
+            messageBox.innerHTML = '<span>You Won SQUID GAME</span>';
+            won = true;
+         }else{
+            messageBox.innerHTML = '<span>Better luck Next time</span>'
+         }
+        }
+    </script>
+</body>
+</html>

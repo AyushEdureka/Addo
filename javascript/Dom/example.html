@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="MyID">Hello Addo</p>
+
+    <div class="myclass">Class selector - 0</div>
+    <div class="myclass">Class selector - 1</div>
+    <div class="myclass">Class selector - 2</div>
+
+    <p>How are you</p>
+
+
+    <div class="box">Box - 0</div>
+    <div class="box">Box - 1</div>
+
+
+    <script>
+        //1.Select Element
+        //A.BY ID
+          
+        const abc =  document.getElementById("MyID"); //Paragraph Tag with My ID
+        console.log(abc)
+        console.log(abc.textContent)
+
+        //B. BY CLASS
+         const xyz =  document.getElementsByClassName("myclass")
+         console.log(xyz)
+         console.log(xyz[1].textContent)
+
+         //3.   TAG NAME
+       const pqr =  document.getElementsByTagName("p")
+       console.log(pqr)
+       console.log(pqr[1].textContent)
+
+       //4. QuerySelector : Follow CSS rule =  #IDNAME , .ClassName
+ 
+        const mnp =  document.querySelector(".box") //Only Selects One which is at Top
+        const qwp = document.querySelectorAll(".box"); // Selects Everthing
+        console.log(qwp[1].textContent)
+        //console.log(mnp)
+
+    </script>
+</body>
+</html>

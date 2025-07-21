@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   let result = 10 + "5"
+   console.log(result);  //"10" + "5": 105
+
+   //Loops
+   for(let i=0;i<3;i++){  
+      //i=0,1,2  3 times
+      for(let j=0;j<2;j++){  //j=0,1   2 times
+        console.log("Hii")
+      }
+
+   }
+
+   //6 times
+
+
+
+//    Write a function to print all numbers from 1 to 20.
+
+
+// - Print "Fizz" for multiples of 3;   6 times
+// - Print "Buzz" for multiples of 5;   4 times
+// - Print "FizzBuzz" for numbers which are multiples of both 3 and 5  ;  1 time
+
+
+function fizzBuzz() {
+  // your code here
+  for(let y=1;y<=20;y++){
+    if(y % 3===0 && y % 5===0){
+        console.log("FizzBuzz")
+    }else if(y % 3 === 0){
+        console.log("Fizz")
+    }else if(y % 5 === 0){
+        console.log("Buzz")
+    }else{
+        console.log(y)
+    }
+  }
+}
+
+// Expected Output:
+fizzBuzz();
+
+
+
+        </script>
+</body>
+</html>
