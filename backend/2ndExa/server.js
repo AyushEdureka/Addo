@@ -1,0 +1,57 @@
+// const express = require('express')
+
+// const app = express()
+
+// //GET  METHOD- IT HELP US TO GET THE DATA FROM BACKEND
+
+// app.get('/login',(req,res)=>{
+
+//     res.send('Fill The Form to Login')
+// })
+
+
+// //Start your Server/Backend
+
+// app.listen(3000,()=>{
+//     console.log('server Running at http://localhost:3000')
+// })
+
+
+//Example:2
+
+const express = require('express')
+const app =express()
+
+const port = 3000 //Address of BAckned
+
+app.use(express.json())
+
+//Midlleware to excahnge data as Json
+
+//1. Get Fetch All Restraunt
+
+app.get('/restraunt' , (req,res)=>{
+    res.send('List of All restraunt')
+})
+
+//Place The order:
+
+//POST: SEND THE DATA TO BACKEND
+app.post('/order',(req,res)=>{
+    res.send(`Order Placed sucessfully  Order detaisl : ${JSON.stringify(req.body)}`)
+})
+
+//PUT : UPDATE THE ORDER
+app.put('/order/:id',(req,res)=>{
+    res.send(`ORDER WITH ID ${req.params.id} Updated sucessfully`)
+})
+
+//Delte the order
+app.delete('/order/:id',(req,res)=>{
+    res.send(`Oder with ID ${req.params.id} delteed sucesffuy`)
+})
+
+
+app.listen(port,()=>{
+    console.log('Server Started http://localhost:3000')
+})
