@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Step 1: Setthing the timer 
+
+        function setTimer(callback){
+         
+            console.log("Baking Bookies In ovenn.....")
+
+            //Step2:
+            setTimeout(function(){
+                console.log("Step2: Cookies are Readyy")
+                callback();   //Keyword : To call the callback function
+            },10000)
+        }
+
+        
+        function TakeOutCookies(){
+            console.log(" Step 3: taking Out Cookies")
+        }
+
+        setTimer(TakeOutCookies) //setTime(function(){})
+
+        console.log("Doing Other Task While Cookies are Baked")
+
+        function add(){
+            console.log(2+2)
+        }
+        add()
+    </script>
+</body>
+</html>

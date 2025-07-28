@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //CALLBACK: CALLBACK IS A FUNCTION AND IT IS PASSED AS PARAMETER INTO ANOTHER FUNCTION
+
+
+        function DoHomeWork(subject,callback){
+          console.log(`Doing Homwork for ${subject}`)
+
+           setTimeout(()=>{
+               console.log('I am Timer')
+           },3000)
+
+           //THIS IS HOW YOU CALL THE CALLBACK FUNCTION
+           callback()
+
+        }
+        DoHomeWork("Math",function(){
+            console.log("Home work done")
+        })
+    </script>
+</body>
+</html>

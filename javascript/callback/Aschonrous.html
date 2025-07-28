@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //MUTIPLE TASK AT THE SAME TIME
+
+        function startTask(){ //Main Task
+
+            console.log("Step 1: Start Boiling The water (This will taks 5 sec)")
+
+            //syntax: setTimeout(Function,Time)
+
+            setTimeout(()=>{
+               console.log("Step 2 Water is ready")
+            },5000)
+
+
+            console.log("Doing Other Task while Coffe is Brewings")
+
+            console.log(2+2)
+        }
+        startTask()
+
+        function SecondTask(){
+            console.log("Hii addo Its The 2 task")
+        }
+        SecondTask()
+    </script>
+</body>
+</html>
