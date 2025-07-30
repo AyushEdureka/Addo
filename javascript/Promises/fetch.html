@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //FETCH KEYWORD : IT IS USED TO FETCH THE DATA FROM API
+
+
+          //synrax
+
+         // fetch('API ADDRESSS')
+
+
+         fetch('http://randomuser.me/api')
+
+
+         //STEP 1 : Whenever you fetch data from API/URL convert it into JSON format
+         .then(res => res.json())
+
+         //STEP 2 : Now you may print the data
+         .then(data=>console.log(data.results[0]))
+
+         .catch(error=>console.log("Error",error))
+    </script>
+</body>
+</html>
