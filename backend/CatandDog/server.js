@@ -5,8 +5,8 @@ const app = express()
 const PORT = 3300
 
 //API
-const CAT_API = 'https://api.thecatapi.com/v1/images/search'
-const DOG_API = 'https://dog.ceo/api/breeds/image/random'
+// const CAT_API = 'https://api.thecatapi.com/v1/images/search'
+// const DOG_API = 'https://dog.ceo/api/breeds/image/random'
 
 //SHOW THE RANDOM CAT AND DOG IMAGE
 
