@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function loadMovie(movieName){
+              return new Promise((resolve)=>{
+                console.log(`Loading ${movieName}....`)
+
+               setTimeout(()=>{
+                   resolve(`${movieName} is ready to watch..`)
+               },2000)
+                 
+              })
+
+        }
+
+        //Async - It help us to do Mutiple task at the same
+
+        async function WatchMovie() {
+            
+            console.log('Getiing Ready To eatch The Movie')
+
+            //Wait for movie to get load
+
+            let movieMessage = await loadMovie("Avengers")
+
+            console.log(movieMessage)
+
+            console.log("Enjoy The movie")
+        }
+        WatchMovie()
+
+        console.log("I will check The review")
+    
+    </script>
+</body>
+</html>

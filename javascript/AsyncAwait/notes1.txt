@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function loadMovie(movieName){
+              return new Promise((resolve)=>{
+                console.log(`Loading ${movieName}....`)
+
+               setTimeout(()=>{
+                   resolve(`${movieName} is ready to watch..`)
+               },2000)
+                 
+              })
+
+        }
+
+        //Async - It help us to do Mutiple task at the same
+
+        async function WatchMovie() {
+            
+            console.log('Getiing Ready To eatch The Movie')
+
+            //Wait for movie to get load
+
+            let movieMessage = await loadMovie("Avengers")
+
+            console.log(movieMessage)
+
+            console.log("Enjoy The movie")
+        }
+        WatchMovie()
+
+        console.log("I will check The review")
+    
+    </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //Async : Function is to Make Asynchronous programming
+        //await : To handle Waiting period/time
+        //fetch : To get the data from API
+
+        async function fetchData() {
+            
+         const data = await   fetch('http://randomuser.me/api')
+
+         //rule to fetch data from jsn
+           const json      =  await  data.json()
+           console.log(json)
+               
+        }
+        fetchData()
+    </script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+     async function getMovie(movieName) {
+         
+        let url = `https://www.omdbapi.com/?t=${movieName}&apikey=a6606658`;
+
+        try{
+
+          const response   = await  fetch(url)
+           let  data        = await response.json()
+
+        //   console.log(data)
+           console.log(`Title :  ${data.Title}`)
+           console.log(`Year:  ${data.Year}`)
+           console.log(`Plot:  ${data.Plot}`)
+           console.log(`Image:  ${data.Poster}`)
+
+        }catch(error){
+            console.log("Error fetching movie", error)
+        }
+
+
+
+     }
+     getMovie("Jumper")
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+        }
+
+        .movie{
+            border: 1px solid #ccc;
+            padding: 20px;
+            max-width: 500px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+<h1>Movie Details</h1>
+<div class="movie" id="MovieC">
+
+</div>
+
+
+    <script>
+
+     async function getMovie(movieName) {
+         
+        let url = `https://www.omdbapi.com/?t=${movieName}&apikey=a6606658`;
+
+        try{
+
+          const response   = await  fetch(url)
+           let  data        = await response.json()
+
+        //   console.log(data)
+          const movieContainer = document.getElementById("MovieC")
+          movieContainer.innerHTML = `
+          <h2>${data.Title}</h2>
+          <p>${data.Year}</p>
+          <p>${data.Plot}</p>
+          <img src=${data.Poster}>
+          `;
+
+        }catch(error){
+            document.getElementById("MovieC").innerHTML = `<p>Error FetchingMovie ${error}</p>`
+        }
+
+
+
+     }
+     getMovie("Avengers")
+
+
+
+    </script>
+</body>
+</html>
